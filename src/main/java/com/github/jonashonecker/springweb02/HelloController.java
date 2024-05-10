@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class HelloController {
 
-    @GetMapping("/hello")
-    public String sayHello() {
-         return "Hello!";
+    @GetMapping("/hello/{name}")
+    public String sayHello(@PathVariable String name) {
+         return "Hello " + name + "!";
     }
 }
